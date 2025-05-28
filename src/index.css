@@ -420,6 +420,21 @@ body {
     left: -100%;
   }
 }
+@media (max-width: 1024px) {
+  .marquee-box {
+    animation-duration: 40s;
+  }
+}
+@media (max-width: 768px) {
+  .marquee-box {
+    animation-duration: 20s;
+  }
+}
+@media (max-width: 480px) {
+  .marquee-box {
+    animation-duration: 8s;
+  }
+}
 /* marquee end */
 
 .card {
