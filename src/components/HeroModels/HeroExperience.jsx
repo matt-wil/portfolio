@@ -7,10 +7,11 @@ import { LightBulb } from "./LightBulb.jsx"
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+      { !isMobile &&
         <OrbitControls 
           enablePan={false}
           enableZoom={!isTablet}
@@ -18,7 +19,8 @@ const HeroExperience = () => {
           minDistance={5}
           minPolarAngle={Math.PI / 5}
           maxPolarAngle={Math.PI / 2}
-        />
+        />  
+      }
         <HeroLights />
         <group 
           scale={isMobile? 0.7 : 1.5}

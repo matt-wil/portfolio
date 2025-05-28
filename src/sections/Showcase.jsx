@@ -39,12 +39,12 @@ const Showcase = () => {
             {/** LEFT */}
             <div className="first-project-wrapper" ref={project1Ref}>
                 <div className="image-wrapper">
-                    <img src="/images/project1.png" alt="Anker Website"/>
+                    <img className="" src="/images/project1.png" alt="Anker Website"/>
                 </div>
                 <div className="text-content">
                     <h2>Business Website with a Simple yet Elegant Design and Focussed on Ease of Use.</h2>
                     <p className="text-white-50 text-xl">
-                        A Website Built with Vite, React, Tailwind CSS, GSAP, Python, SQL and i18next.
+                        A Website Built with Vite, React, Tailwind CSS, GSAP, Python, SQL and i18next. (Currently in Development)
                     </p>
                 </div>
             </div>
