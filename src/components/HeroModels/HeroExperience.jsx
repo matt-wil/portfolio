@@ -4,13 +4,24 @@ import { Room } from "./Room.jsx"
 import { useMediaQuery } from "react-responsive"
 import HeroLights from "./HeroLights.jsx"
 import { LightBulb } from "./LightBulb.jsx"
+import { useRef } from "react"
+import { EffectComposer, Bloom } from "@react-three/postprocessing"
+
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const groupRef = useRef();
+
 
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+      <EffectComposer>
+      <Bloom 
+        luminanceThreshold={0.3}
+        luminanceSmoothing={0.9}
+        intensity={.5}
+      />
       { !isMobile &&
         <OrbitControls 
           enablePan={false}
@@ -23,15 +34,17 @@ const HeroExperience = () => {
       }
         <HeroLights />
         <group 
-          scale={isMobile? 0.7 : 1.5}
+          ref={groupRef}
+          scale={isMobile? 1.7 : 2}
           position={[0, -3.5, 0]}
           rotation={[0, -Math.PI /4, 0]}
         >
-          <LightBulb />
+          <LightBulb isMobile={isMobile}/>
           {/** 
           <Room />
           */}
         </group>
+        </EffectComposer>
     </Canvas>
   )
 }

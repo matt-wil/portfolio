@@ -8,15 +8,57 @@ Source: https://sketchfab.com/3d-models/light-bulb-b05d65aada034ccebdc73d5982108
 Title: Light Bulb
 */
 
-import React from 'react'
+import { useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 
 export function LightBulb(props) {
+  const [isOn, setIsOn] = useState(false);
+  const bulbRef = useRef();
+  const glassRef = useRef();
+
   const { nodes, materials } = useGLTF('/models/light_bulb-transformed.glb')
+
+  {/** Glow */}
+  useFrame(() => {
+    if (glassRef.current && isOn) {
+      glassRef.current.material.emissiveIntensity = 1;
+    } else if (glassRef.current) {
+      glassRef.current.material.emissiveIntensity = 0;
+    }
+  })
+
+  useFrame(() => {
+    if (props.isMobile && bulbRef.current) {
+      bulbRef.current.rotation.y += 0.01;
+    }
+  })
+
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials.Material} rotation={[-Math.PI / 2, 0, 0]} />
-      <mesh geometry={nodes.Object_3.geometry} material={materials.transparente_del_foco} rotation={[-Math.PI / 2, 0, 0]} />
+    <group ref={bulbRef} {...props} dispose={null} onClick={() => setIsOn((prev => !prev))}>
+      <mesh 
+        geometry={nodes.Object_2.geometry} 
+        material={materials.Material} 
+        rotation={[-Math.PI / 2, 0, 0]} 
+        ref={glassRef}
+        material-emissive={"yellow"}
+        material-emissive-intensity={isOn ? 1 : 0}
+      />
+      <mesh 
+        geometry={nodes.Object_3.geometry} 
+        material={materials.transparente_del_foco} 
+        rotation={[-Math.PI / 2, 0, 0]}
+      />
+
+      {isOn && (
+        <pointLight
+          position={[0, 0.5, 0]}
+          intensity={10}
+          color="yellow"
+          distance={10}
+          decay={2}
+          />
+      )}
     </group>
   )
 }

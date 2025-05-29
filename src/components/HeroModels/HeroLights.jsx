@@ -5,9 +5,9 @@ const HeroLights = () => {
     <>
       <ambientLight intensity={5} color="#1a1a40" />
       <directionalLight position={[5, 5, 5]} intensity={100} />
-      <pointLight position={[0, 1, 0]} intensity={5000} color="#7209b7" />
-      <pointLight position={[0, 1, 2]} intensity={5000} color="#0d00a4" />
-      <spotLight position={[5, 5, 1]} intensity={50000} color="#7209b7" />
+      <pointLight position={[0, 1, 0]} intensity={500} color="#7209b7" />
+      <pointLight position={[0, 1, 2]} intensity={500} color="#0d00a4" />
+      <spotLight position={[5, 5, 1]} intensity={5000} color="#7209b7" />
 
     {/**   
          This lighting is for the Room 
