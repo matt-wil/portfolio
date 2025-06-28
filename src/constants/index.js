@@ -371,7 +371,7 @@ const certificates = [
     description: [
       "Explore the more advanced concepts in JavaScript",
       "Advanced Foundations of JavaScript",
-      "Methods, Async, Classes, Advanced Objects and Function Patters",
+      "Methods, Async, Classes, Advanced Objects and Function Patterns",
     ]
   },
 ];
