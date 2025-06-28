@@ -275,7 +275,7 @@ const certificates = [
     ]
   },
   {
-    review: "Amazing!",
+    review: "Crazy Syntaxes!",
     name: "Learn JavaScript",
     imgPath: "/images/cert1.png",
     logoPath: "/images/scrimba1.png",
@@ -288,7 +288,7 @@ const certificates = [
     ]
   },
   {
-    review: "Amazing!",
+    review: "More Typing Safer Code, keen to learn more!",
     name: "Learn TypeScript",
     imgPath: "/images/cert2.png",
     logoPath: "/images/scrimba1.png",
@@ -313,7 +313,42 @@ const certificates = [
     ]
   },
   {
-    review: "Amazing!",
+    review: "Super!",
+    name: "Learn Node.js",
+    imgPath: "/images/cert6.png",
+    logoPath: "/images/scrimba1.png",
+    title: "Learn Node.js",
+    date: "2025",
+    description: [
+      "Learn the core concepts of Node.js",
+    ]
+  },
+  {
+    review: "Interesting!",
+    name: "Learn Next.js",
+    imgPath: "/images/cert7.png",
+    logoPath: "/images/scrimba1.png",
+    title: "Learn Next.js",
+    date: "2025",
+    description: [
+      "Learn the basics of Next.js",
+      "Develop a Next.js Project",
+    ]
+  },
+  {
+    review: "Backend can be sometimes simpler!",
+    name: "Learn Express.js",
+    imgPath: "/images/cert9.png",
+    logoPath: "/images/scrimba1.png",
+    title: "Learn Express.js",
+    date: "2025",
+    description: [
+      "Look at the syntaxes of Express.js",
+      "Understand the core concepts of Express.js"
+    ]
+  },
+  {
+    review: "Love it!",
     name: "Advanced React",
     imgPath: "/images/cert4.png",
     logoPath: "/images/scrimba1.png",
@@ -324,6 +359,19 @@ const certificates = [
       "Dive deeper into react hooks and stucture",
       "Learn React Router and many more React Libraries",
       "Build 5+ Projects"
+    ]
+  },
+  {
+    review: "More Crazy Syntaxes, but I got the hang of it!",
+    name: "Advanced JavaScript",
+    imgPath: "/images/cert8.png",
+    logoPath: "/images/scrimba1.png",
+    title: "Advanced JavaScript",
+    date: "2025",
+    description: [
+      "Explore the more advanced concepts in JavaScript",
+      "Advanced Foundations of JavaScript",
+      "Methods, Async, Classes, Advanced Objects and Function Patters",
     ]
   },
 ];
