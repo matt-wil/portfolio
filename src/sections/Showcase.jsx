@@ -44,7 +44,10 @@ const Showcase = () => {
                 <div className="text-content">
                     <h2>Business Website with a Simple yet Elegant Design and Focussed on Ease of Use.</h2>
                     <p className="text-white-50 text-xl">
-                        A Website Built with Vite, React, Tailwind CSS, GSAP, Python, SQL and i18next. (Currently in Development)
+                        A Website Built with Vite, React, Tailwind CSS, GSAP, Python, SQL and i18next. (Test Phase Deployment)
+                    </p>
+                    <p>
+                        <a href="https://anker-tattoo-piercing.vercel.app/" target="_blank">Check it out!</a>
                     </p>
                 </div>
             </div>
