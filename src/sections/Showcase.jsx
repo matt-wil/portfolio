@@ -59,14 +59,11 @@ const Showcase = () => {
                 on Ease of Use.
               </h2>
               <p className="text-white-50 text-xl">
-                A Website Built with Next.js, TypeScript, Tailwind CSS, GSAP,
-                next-intl. (Test Phase Deployment)
+                Built with Next.js, TypeScript, Tailwind CSS, GSAP and next-intl
+                for translations.
               </p>
               <p>
-                <a
-                  href="https://anker-tattoo-piercing-freiburg.onrender.com/en"
-                  target="_blank"
-                >
+                <a href="https://anker-tattoo.de" target="_blank">
                   Check it out!
                 </a>
               </p>
